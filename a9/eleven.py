@@ -64,17 +64,18 @@ class Vector2d:
         return cls(*memv)
 
 
-print(format(Vector2d(1, 1), 'p'))
-print(format(Vector2d(1, 1), '.3ep'))
-print(format(Vector2d(1, 1), '0.5fp'))
+if __name__ == '__main__':
+    print(format(Vector2d(1, 1), 'p'))
+    print(format(Vector2d(1, 1), '.3ep'))
+    print(format(Vector2d(1, 1), '0.5fp'))
 
-v1 = Vector2d(3, 4)
-v2 = Vector2d(3.1, 4.2)
-try:
-    print(hash(v1), hash(v2))
-except TypeError as e:
-    print('hash', e)
-try:
-    print(set([v1, v2]))
-except TypeError as e:
-    print('set', e)
+    v1 = Vector2d(3, 4)
+    v2 = Vector2d(3.1, 4.2)
+    try:
+        print(hash(v1), hash(v2))
+    except TypeError as e:
+        print('hash', e)
+    try:
+        print(set([v1, v2]))
+    except TypeError as e:
+        print('set', e)
